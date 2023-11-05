@@ -29,8 +29,8 @@
 \section{Vantagens}
 
 Acesso Eficiente: As tabelas hash oferecem um tempo médio de acesso constante, tornando-as ideais para operações de busca e recuperação de dados.\\
-\\Flexibilidade: Elas são amplamente utilizadas em uma variedade de aplicações, incluindo dicionários, conjuntos, caches e muito mais.\\
-\\Desempenho Rápido: Quando implementadas corretamente, as tabelas hash podem proporcionar um desempenho excepcional na maioria das operações.
+\\Flexibilidade: Elas são muito utilizadas em uma variedade de aplicações, incluindo dicionários, conjuntos, caches e muito mais.\\
+\\Desempenho Rápido: As tabelas hash podem proporcionar um desempenho excepcional na maioria das operações.
 
 \section{Desvantagens}
 
@@ -127,7 +127,7 @@ Tamanho & Inserção & Busca & Colisões\\
 
 \section{Conclusão}
 
-As tabelas hash são uma ferramenta valiosa no arsenal de qualquer programador ou engenheiro de software, permitindo o desenvolvimento de soluções eficazes e escaláveis para uma ampla gama de problemas. Se utilizadas com cuidado e consideração, as tabelas hash podem contribuir para o aprimoramento do desempenho e eficiência de aplicações e sistemas computacionais.
+As tabelas hash são essenciais para qualquer programador, permitindo o desenvolvimento de soluções eficazes para muitos problemas atualmente. Se utilizadas com cuidado e consideração, as tabelas hash podem ter um ótimo desempenho, podendo ser muito útil em estrutura de dados.
 
 
 \end{document}
