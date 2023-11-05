@@ -34,7 +34,7 @@ class Tabela {
     }
 
     public int hashMultiplicacao(int codigo) {
-        double A = 0.6180339887; // Constante recomendada para multiplicação
+        double A = 0.6180339887; 
         double produto = A * codigo;
         double fracao = produto - (int) produto;
         return (int) (tamanho * fracao);
@@ -45,8 +45,8 @@ class Tabela {
         int tempCodigo = codigo;
 
         while (tempCodigo > 0) {
-            soma += tempCodigo % 1000; // Soma grupos de 3 dígitos
-            tempCodigo /= 1000; // Move para o próximo grupo de 3 dígitos
+            soma += tempCodigo % 1000; 
+            tempCodigo /= 1000;
         }
 
         return soma % tamanho;
@@ -54,7 +54,7 @@ class Tabela {
 
     public void adicionarRegistro(Registro novo_registro, int escolhaFuncao) {
         int codigo = novo_registro.getRegistro();
-        int valor_vetor = -1; // Inicialize com um valor padrão
+        int valor_vetor = -1; 
         if (escolhaFuncao == 1) {
             valor_vetor = hashResto(codigo);
         } else if (escolhaFuncao == 2) {
@@ -62,7 +62,6 @@ class Tabela {
         } else if (escolhaFuncao == 3) {
             valor_vetor = hashDobramento(codigo);
         } else {
-            // Lidar com valores inválidos de escolhaFuncao aqui
         }
 
         if (valor_vetor != -1) {
@@ -89,7 +88,7 @@ class Tabela {
 
             if (codigo == chave) {
                 System.out.println("O registro " + codigo + " está na posição " + valor);
-                return; // Encerre a busca, pois encontrou o registro
+                return;
             }
 
             valor = (valor + 1) % tamanho;
@@ -121,7 +120,7 @@ public class teste {
     }
 
     public static void main(String[] args) {
-        long seed = 12345; // Defina a semente (seed) desejada
+        long seed = 12345;
 
         int[] tamanhosTabela = {10, 100, 500, 10000, 50000};
         Scanner scanner = new Scanner(System.in);
@@ -146,14 +145,14 @@ public class teste {
             long endTimeInsercao = System.nanoTime();
             double tempoInsercao = (endTimeInsercao - startTimeInsercao) / 1e6; // Converter para milissegundos
 
-            // Medir o tempo de busca (exemplo de busca por um registro no meio do conjunto)
-            int indiceBusca = tamanho / 2; // Índice do registro a ser buscado
+
+            int indiceBusca = tamanho / 2; 
             Registro registroBusca = conjuntoDeDados[indiceBusca];
 
             long startTimeBusca = System.nanoTime();
             tabela.buscarRegistro(registroBusca);
             long endTimeBusca = System.nanoTime();
-            double tempoBusca = (endTimeBusca - startTimeBusca) / 1e6; // Converter para milissegundos
+            double tempoBusca = (endTimeBusca - startTimeBusca) / 1e6;
 
 
             int colisoes = tabela.getColisoes();
