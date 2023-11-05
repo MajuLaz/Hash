@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+
+%\usepackage[brazil]{babel}   
+\usepackage[utf8]{inputenc}  
+
+     
+\sloppy
+
+\title{Tabela Hash}
+
+\author{Victor Hugo, Maria Julia, Francisco Ochoa}
+
+
+\address{PUCPR}
+
+\begin{document} 
+
+\maketitle
+     
+\begin{resumo} 
+  Uma tabela hash, também conhecida como hash table ou hash map, é uma estrutura de dados fundamental na estrutura de dados que oferece uma maneira eficiente de armazenar e recuperar valores associados a chaves. Ela se baseia no princípio de mapeamento de chaves para índices usando uma função de hash, que permite um acesso rápido aos dados armazenados. Neste trabalho, abordaremos os conceitos essenciais relacionados a tabelas hash, incluindo sua estrutura, operações, vantagens e desafios.
+\end{resumo}
+
+
+\section{Vantagens}
+
+Acesso Eficiente: As tabelas hash oferecem um tempo médio de acesso constante, tornando-as ideais para operações de busca e recuperação de dados.\\
+\\Flexibilidade: Elas são amplamente utilizadas em uma variedade de aplicações, incluindo dicionários, conjuntos, caches e muito mais.\\
+\\Desempenho Rápido: Quando implementadas corretamente, as tabelas hash podem proporcionar um desempenho excepcional na maioria das operações.
+
+\section{Desvantagens}
+
+Colisões: Colisões ocorrem quando duas chaves resultam no mesmo índice. Estratégias como listas encadeadas, árvores ou rehashing são usadas para lidar com colisões.\\
+\\Função de Hash Eficiente: A escolha de uma função de hash eficaz é crucial para evitar colisões e garantir a distribuição uniforme das chaves.\\
+\\Dimensionamento: Tabelas hash devem ser dimensionadas adequadamente para evitar sobrecargas de armazenamento e manter o desempenho
+
+\section{Tabelas}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|}
+\hline
+\multicolumn{1}{|c|}{Hash Resto} \\
+\hline
+\begin{tabular}{|c|c|c|c|}
+\hline
+Tamanho & Inserção & Busca & Colisões\\
+\hline
+10 & 0.0071 & 9.6136 & 11\\
+\hline
+100 & 0.0396 & 0.2237 & 621\\
+\hline
+500 & 1.8521 & 1.0108 & 3744\\
+\hline
+10000 & 7.0463 & 0.3177 & 494758\\
+\hline
+50000 & 118.288 & 0.3199 & 8475833\\
+\hline
+\multicolumn{4}{|c|}{Média} \\
+\hline
+. & 25.44662 & 11,4857 & 1.794.993\\
+\hline
+\end{tabular}
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|}
+\hline
+\multicolumn{1}{|c|}{Hash Multiplicação} \\
+\hline
+\begin{tabular}{|c|c|c|c|}
+\hline
+Tamanho & Inserção & Busca & Colisões\\
+\hline
+10 & 0.0126 & 11.3274 & 13\\
+\hline
+100 & 0.0869 & 0.1726 & 435\\
+\hline
+500 & 0.882 & 0.575 & 9374\\
+\hline
+10000 & 8.1711 & 1.3377 & 61936\\
+\hline
+50000 & 104.7158 & 1.1955 & 9766708\\
+\hline
+\multicolumn{4}{|c|}{Média} \\
+\hline
+. & 22,77368 & 14,6082 & 1.967.693\\
+\hline
+\end{tabular}
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|}
+\hline
+\multicolumn{1}{|c|}{Hash Dobramento} \\
+\hline
+\begin{tabular}{|c|c|c|c|}
+\hline
+Tamanho & Inserção & Busca & Colisões\\
+\hline
+10 & 0.0086 & 10.8747 & 11\\
+\hline
+100 & 0.2015 & 0.3237 & 378\\
+\hline
+500 & 0.9916 & 0.4358 & 4692\\
+\hline
+10000 & 446.097 & 0.4817 & 38261984\\
+\hline
+50000 & 12860.6885 & 1.5514 & 1183118419\\
+\hline
+\multicolumn{4}{|c|}{Média} \\
+\hline
+. & 25.721.466 & 13,6673 & 244.277.096\\
+\hline
+\end{tabular}
+\end{tabular}
+\end{table}
+
+
+\section{Conclusão}
+
+As tabelas hash são uma ferramenta valiosa no arsenal de qualquer programador ou engenheiro de software, permitindo o desenvolvimento de soluções eficazes e escaláveis para uma ampla gama de problemas. Se utilizadas com cuidado e consideração, as tabelas hash podem contribuir para o aprimoramento do desempenho e eficiência de aplicações e sistemas computacionais.
+
+
+\end{document}
